@@ -80,7 +80,7 @@ control = [
         array[i][0],
         array[i][1],
         array[i][2] + "県" + array[i][3] + "市" + array[i][4] + "町",
-        array[i][0],
+        array[i][5],
     ]
     for i in range(len(array))
 ]
