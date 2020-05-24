@@ -60,7 +60,7 @@ array = [
         random.choice(prefecture)[0] + random.choice(prefecture)[1],
         str(random.randint(1000000, 9999999)),
     ]
-    for i in range(10000)
+    for i in range(100)
 ]
 
 info = [
