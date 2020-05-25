@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 情報処理概論演習</title>
-    <link>http://kmgk.github.io/introduction-of-information-processing/tags/</link>
+    <link>https://kmgk.github.io/introduction-of-information-processing/tags/</link>
     <description>Recent content in Tags on 情報処理概論演習</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="http://kmgk.github.io/introduction-of-information-processing/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://kmgk.github.io/introduction-of-information-processing/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

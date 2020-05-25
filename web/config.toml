@@ -1,4 +1,4 @@
-baseURL = "http://kmgk.github.io/introduction-of-information-processing/"
+baseURL = "https://kmgk.github.io/introduction-of-information-processing/"
 languageCode = "en-us"
 title = "情報処理概論演習"
 theme ="hugo-theme-basic"
