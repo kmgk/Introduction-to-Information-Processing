@@ -1,4 +1,6 @@
-問題は告知なく修正、追加される場合があります。
+問題は告知なく修正、追加される場合があります。質問や要望がある場合は[twitter](https://twitter.com/hkimrgakgi)か[Issue](https://github.com/kmgk/Introduction-to-Information-Processing/issues)を立ててください。
+
+ヒントとVBAチートシートは要望とモチベがあれば作成するかもしれません。
 
 ## 注意
 
