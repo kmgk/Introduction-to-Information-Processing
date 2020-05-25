@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html
+  class=""
+  lang="en-us"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
+  <head>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="MobileOptimized" content="320" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta name="keywords" content="">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:description" content="" />
+<meta property="og:title" content="期末試験対策問題" />
+<meta property="og:site_name" content="情報処理概論演習" />
+<meta property="og:image" content="" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="" />
+<meta property="og:image:height" content="" />
+<meta property="og:url" content="http://kmgk.github.io/introduction-of-information-processing/post/%E6%9C%9F%E6%9C%AB%E8%A9%A6%E9%A8%93%E5%AF%BE%E7%AD%96%E5%95%8F%E9%A1%8C/" />
+<meta property="og:locale" content="en-us" />
+<meta property="article:published_time" content="2020-05-25
+" /> <meta property="article:modified_time" content="2020-05-25
+" />
+
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@siegerts" />
+<meta name="twitter:creator" content="@siegerts" />
+<meta
+  name="twitter:title"
+  content="期末試験対策問題 | 情報処理概論演習"
+/>
+<meta
+  name="twitter:description"
+  content="問題は告知なく修正、追加される場合があります。質問や要望がある場合はtwitterかIssueを立ててください。
+ヒントと VBA チートシートは要望とモチベがあれば作成するかもしれません。
+注意 文字化けする場合はutf-8.csvの方でやってみてください。
+ストーリー(読まなくても構いません) あなたは材料キングダムの住人です。ある日、OHKA ウイルスが国中に蔓延し外出自粛による経済難が国を襲いました。そこで、経済対策として国民全員に 5 千兆円を配ることが決まりました。幸い国民全員の名前、住所、口座番号が紐づけられている国民管理システムがあるので、それを使って国民へ 5 千兆円を配布することができます。
+しかし、材料キングダムにはお金を配布する際にある法律が関わってきます。それは、確認のため国民管理システム登録されている内容と同じもの（名前、住所、口座番号）を国に送信しなければならない、というものです。そのため国の担当者は一夜にしてそのシステムを作り上げてインターネット上に公開し、国民に情報を送信してもらいました。
+そしてあなたはその情報を処理する以下のタスクを任されました。以下の問題を解いてください。
+条件 csv ファイルを見ながら読むと理解しやすいと思います。
+集めた情報 国民が送信した情報はinfo.csvに保存されています。保存形式は以下のようになっています。
+   性 名 県名 市名 町名 口座番号     (例)山田 太郎 物質県 理工市 材料町 111-1111    各列は以下の要件を満たしています
+  県名
+〇〇県と〇〇の場合がある。都道府は存在せず県のみ存在する。
+例）愛知県、愛知
+  市名
+〇〇市と〇〇の場合がある。区などは存在せず市のみ存在する。
+例）知立市、知立
+  町名
+〇〇町と〇〇の場合がある。村などは存在せず町のみ存在する。
+例）片倉町、片倉
+  口座番号
+〇〇〇-〇〇〇〇(3 桁-4 桁)の場合と〇〇〇〇〇〇〇(7 桁)の場合がある
+例）123-4567、1234567
+  国民管理システム 国民管理システムの情報はcontrol.csvに保存されています。保存形式は以下のようになっています。|"
+/>
+<meta name="twitter:image:src" content="" />
+<meta name="twitter:domain" content="http://kmgk.github.io/introduction-of-information-processing/post/%E6%9C%9F%E6%9C%AB%E8%A9%A6%E9%A8%93%E5%AF%BE%E7%AD%96%E5%95%8F%E9%A1%8C/" />
+
+
+
+    <title>期末試験対策問題</title>
+    <link rel="canonical" href="http://kmgk.github.io/introduction-of-information-processing/post/%E6%9C%9F%E6%9C%AB%E8%A9%A6%E9%A8%93%E5%AF%BE%E7%AD%96%E5%95%8F%E9%A1%8C/" />
+
+
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/tachyons@4.11.1/css/tachyons.min.css"
+/>
+
+<link rel="stylesheet" href="http://kmgk.github.io/introduction-of-information-processing/css/style.css" />
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/highlightjs@9.12.0/styles/github-gist.css"
+/>
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+
+
+<body
+  lang="en-us"
+  class="sans-serif w-90 w-80-m w-60-ns center mv2 mv5-ns"
+  itemscope
+  itemtype="http://schema.org/Article"
+>
+  
+  <span class="b">/ </span>
+  <a href="http://kmgk.github.io/introduction-of-information-processing/" class="b bb bw1 pb1 no-underline black">情報処理概論演習</a>
+  <span class="b"> / </span>
+  <a href="http://kmgk.github.io/introduction-of-information-processing//post" class="b bb bw1 pb1 no-underline black">記事一覧</a>
+
+  <section id="main" class="mt5">
+    <h1 itemprop="name" id="title">期末試験対策問題</h1>
+    <span class="f6 gray">May 25, 2020</span>
+
+      <article itemprop="articleBody" id="content" class="w-90 lh-copy">
+        <p>問題は告知なく修正、追加される場合があります。質問や要望がある場合は<a href="https://twitter.com/hkimrgakgi">twitter</a>か<a href="https://github.com/kmgk/Introduction-to-Information-Processing/issues">Issue</a>を立ててください。</p>
+<p>ヒントと VBA チートシートは要望とモチベがあれば作成するかもしれません。</p>
+<h2 id="注意">注意</h2>
+<p>文字化けする場合は<code>utf-8.csv</code>の方でやってみてください。</p>
+<h2 id="ストーリー読まなくても構いません">ストーリー(読まなくても構いません)</h2>
+<p>あなたは材料キングダムの住人です。ある日、OHKA ウイルスが国中に蔓延し外出自粛による経済難が国を襲いました。そこで、経済対策として国民全員に 5 千兆円を配ることが決まりました。幸い国民全員の名前、住所、口座番号が紐づけられている国民管理システムがあるので、それを使って国民へ 5 千兆円を配布することができます。</p>
+<p>しかし、材料キングダムにはお金を配布する際にある法律が関わってきます。それは、確認のため国民管理システム登録されている内容と同じもの（名前、住所、口座番号）を国に送信しなければならない、というものです。そのため国の担当者は一夜にしてそのシステムを作り上げてインターネット上に公開し、国民に情報を送信してもらいました。</p>
+<p>そしてあなたはその情報を処理する以下のタスクを任されました。以下の問題を解いてください。</p>
+<h2 id="条件">条件</h2>
+<p>csv ファイルを見ながら読むと理解しやすいと思います。</p>
+<h3 id="集めた情報">集めた情報</h3>
+<p>国民が送信した情報は<code>info.csv</code>に保存されています。保存形式は以下のようになっています。</p>
+<table>
+<thead>
+<tr>
+<th>性</th>
+<th>名</th>
+<th>県名</th>
+<th>市名</th>
+<th>町名</th>
+<th>口座番号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(例)<code>山田</code></td>
+<td><code>太郎</code></td>
+<td><code>物質県</code></td>
+<td><code>理工市</code></td>
+<td><code>材料町</code></td>
+<td><code>111-1111</code></td>
+</tr>
+</tbody>
+</table>
+<p>各列は以下の要件を満たしています</p>
+<ul>
+<li>
+<p>県名</p>
+<p><code>〇〇県</code>と<code>〇〇</code>の場合がある。都道府は存在せず県のみ存在する。</p>
+<p>例）<code>愛知県</code>、<code>愛知</code></p>
+</li>
+<li>
+<p>市名</p>
+<p><code>〇〇市</code>と<code>〇〇</code>の場合がある。区などは存在せず市のみ存在する。</p>
+<p>例）<code>知立市</code>、<code>知立</code></p>
+</li>
+<li>
+<p>町名</p>
+<p><code>〇〇町</code>と<code>〇〇</code>の場合がある。村などは存在せず町のみ存在する。</p>
+<p>例）<code>片倉町</code>、<code>片倉</code></p>
+</li>
+<li>
+<p>口座番号</p>
+<p><code>〇〇〇-〇〇〇〇</code>(3 桁-4 桁)の場合と<code>〇〇〇〇〇〇〇</code>(7 桁)の場合がある</p>
+<p>例）<code>123-4567</code>、<code>1234567</code></p>
+</li>
+</ul>
+<h3 id="国民管理システム">国民管理システム</h3>
+<p>国民管理システムの情報は<code>control.csv</code>に保存されています。保存形式は以下のようになっています。</p>
+<table>
+<thead>
+<tr>
+<th>性</th>
+<th>名</th>
+<th>住所</th>
+<th>口座番号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(例)<code>山田</code></td>
+<td><code>太郎</code></td>
+<td><code>愛知県知立市片倉町</code></td>
+<td><code>1111111</code></td>
+</tr>
+</tbody>
+</table>
+<p>各列は以下の要件を満たしています</p>
+<ul>
+<li>
+<p>住所</p>
+<p><code>〇〇県××市□□町</code>の形式で保存。例）<code>静岡県沼津市本田町</code></p>
+</li>
+<li>
+<p>口座番号</p>
+<p><code>〇〇〇〇〇〇〇</code>(7 桁)で保存。例）<code>1234567</code></p>
+</li>
+</ul>
+<h2 id="問-1-集めた情報の読み込み">問 1. 集めた情報の読み込み</h2>
+<p><code>info.csv</code>を読み込み、読み込んだものを値を変えることなく 6xN の二次元配列に保存しその配列を返す Function プロシージャを作成してください。</p>
+<p><a href="#%E5%95%8F-1">解答例</a></p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<h2 id="問-2-エクセルへの記入">問 2. エクセルへの記入</h2>
+<p>特に理由はありませんが、VBA の練習のために問 1 で作成した Function プロシージャの返り値を全てエクセルに記入する Sub プロシージャを作成してください。ただし、一行目は各列の種類 <code>性、名、県名、市名、町名、口座番号（のいずれか）</code>を入力してください。</p>
+<p><a href="#%E5%95%8F-2">解答例</a></p>
+<h2 id="問-3-データ整理">問 3. データ整理</h2>
+<p>問 1 で作った Function プロシージャの返り値の配列を整理してもらいます。現在の配列には<code>性、名、県名、市名、町名、口座番号</code>の情報が入っていますが、以下の処理をして<code>性、名、住所、口座番号</code>に変換したものを新しい配列に保存し、それを返す Function プロシージャを作成してください。</p>
+<h3 id="処理">処理</h3>
+<ul>
+<li><code>性</code>、<code>名</code>はそのまま</li>
+<li><code>県名</code>、<code>市名</code>、<code>町名</code>は<code>住所</code>として(#条件)を満たすように変換する</li>
+<li><code>口座番号</code>は<a href="#%E6%9D%A1%E4%BB%B6">条件</a>を満たすように変換する。</li>
+</ul>
+<p><a href="#%E5%95%8F-3">解答例</a></p>
+<h2 id="問-4-csv-出力">問 4. csv 出力</h2>
+<p>問 3.で作った Function プロシージャの返り値の配列を <code>result.csv</code> に出力する Sub プロシージャを作成してください。ただし一行目は各列の種類 <code>性、名、住所、口座番号（のいずれか）</code>を出力してください。</p>
+<p><a href="#%E5%95%8F-4">解答例</a></p>
+<h2 id="問-5-まとめ">問 5. まとめ</h2>
+<p>問 1~問 4 までの一連の動作を組み合わせて実際に動くプログラムを作成してください。</p>
+<p><a href="#%E5%95%8F-5">解答例</a></p>
+<h2 id="解答例">解答例</h2>
+<h3 id="問-1">問 1</h3>
+<p><a href="#%E5%95%8F-1-%E9%9B%86%E3%82%81%E3%81%9F%E6%83%85%E5%A0%B1%E3%81%AE%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF">問題</a></p>
+<pre><code>Function problem1() As String()
+    ChDrive ThisWorkbook.Path
+    ChDir ThisWorkbook.Path
+
+    Open &quot;info.csv&quot; For Input As #1
+    Dim line As String, i As Long
+    Dim arr() As String
+    Dim lineNum As Long
+
+    lineNum = 0
+    Do Until EOF(1)
+        Line Input #1, line
+        lineElements = Split(line, &quot;,&quot;)
+        ReDim Preserve arr(5, lineNum)
+        For i = 0 To UBound(lineElements)
+            arr(i, lineNum) = lineElements(i)
+        Next i
+        lineNum = lineNum + 1
+    Loop
+
+    problem1 = arr()
+
+    Close #1
+End Function
+</code></pre><h3 id="問-2">問 2</h3>
+<p><a href="#%E5%95%8F-2-%E3%82%A8%E3%82%AF%E3%82%BB%E3%83%AB%E3%81%B8%E3%81%AE%E8%A8%98%E5%85%A5">問題</a></p>
+<pre><code>Sub problem2(ByRef arr() As String)
+    Dim i As Long, j As Long
+
+    For i = 0 To UBound(arr, 1)
+        For j = 0 To UBound(arr, 2)
+            Cells(j + 1, i + 1).Value = arr(i, j)
+        Next j
+    Next i
+End Sub
+</code></pre><h3 id="問-3">問 3</h3>
+<p><a href="#%E5%95%8F-3-%E3%83%87%E3%83%BC%E3%82%BF%E6%95%B4%E7%90%86">問題</a></p>
+<pre><code>Function problem3(ByRef arr() As String) As String()
+    Dim result() As String
+    Dim i As Long, j As Long
+    Dim lineNum As Long
+
+    lineNum = 0
+    ReDim Preserve result(3, lineNum)
+    result(0, 0) = &quot;性&quot;
+    result(1, 0) = &quot;名&quot;
+    result(2, 0) = &quot;住所&quot;
+    result(3, 0) = &quot;口座番号&quot;
+    For i = 1 To UBound(arr, 2)
+        lineNum = lineNum + 1
+        ReDim Preserve result(3, lineNum)
+        For j = 0 To 3
+            Select Case j
+            Case 0
+                result(j, i) = arr(j, i)
+            Case 1
+                result(j, i) = arr(j, i)
+            Case 2
+                result(j, i) = Split(arr(2, i), &quot;県&quot;)(0) + &quot;県&quot; + Split(arr(3, i), &quot;市&quot;)(0) + &quot;市&quot; + Split(arr(4, i), &quot;町&quot;)(0) + &quot;町&quot;
+            Case 3
+                kouza = Split(arr(5, i), &quot;-&quot;)
+                If UBound(kouza) = 0 Then
+                    result(j, i) = kouza(0)
+                Else
+                    result(j, i) = kouza(0) + kouza(1)
+                End If
+            End Select
+        Next j
+    Next i
+
+    problem3 = result()
+End Function
+</code></pre><h3 id="問-4">問 4</h3>
+<p><a href="#%E5%95%8F-4-csv-%E5%87%BA%E5%8A%9B">問題</a></p>
+<pre><code>Sub problem4(ByRef arr() As String)
+    Dim i As Long, j As Long
+    Dim filePath As String
+
+    filePath = ThisWorkbook.Path &amp; &quot;\result.csv&quot;
+    Open filePath For Output As #1
+
+    For i = 0 To UBound(arr, 2)
+        For j = 0 To UBound(arr, 1)
+            If j &lt;&gt; UBound(arr, 1) Then
+                Print #1, arr(j, i) &amp; &quot;,&quot;;
+            Else
+                Print #1, arr(j, i)
+            End If
+        Next j
+    Next i
+    Close #1
+End Sub
+
+</code></pre><h3 id="問-5">問 5</h3>
+<p><a href="#%E5%95%8F-5-%E3%81%BE%E3%81%A8%E3%82%81">問題</a></p>
+<pre><code>Sub main()
+    Dim arr() As String
+
+
+    arr = problem1()
+    Call problem2(arr)
+    arr = problem3(arr)
+    Call problem4(arr)
+End Sub
+</code></pre>
+      </article>
+
+      
+      <span class="f6 gray mv3" title="Lastmod: May 25, 2020. Published at: 2020-05-25.">
+        
+      </span>
+
+      
+
+  </section>
+
+  <footer>
+    <div>
+      <p class="f6 gray mt6 lh-copy">
+        
+      </p>
+    </div>
+  </footer>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/highlight.min.js"></script>
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+
+  </body>
+</html>
