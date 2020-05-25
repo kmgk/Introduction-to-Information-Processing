@@ -1,3 +1,5 @@
+[web ページ](https://kmgk.github.io/introduction-of-information-processing/post/%E6%9C%9F%E6%9C%AB%E8%A9%A6%E9%A8%93%E5%AF%BE%E7%AD%96%E5%95%8F%E9%A1%8C/)
+
 問題は告知なく修正、追加される場合があります。質問や要望がある場合は[twitter](https://twitter.com/hkimrgakgi)か[Issue](https://github.com/kmgk/Introduction-to-Information-Processing/issues)を立ててください。
 
 ヒントと VBA チートシートは要望とモチベがあれば作成するかもしれません。
